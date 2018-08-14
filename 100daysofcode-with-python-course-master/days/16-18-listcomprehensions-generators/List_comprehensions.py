@@ -26,6 +26,7 @@ print(new_names)
 
 
 def parsing_a_remote_txt_file(url):
+
     remote_text_content = requests.get(url)
     best_words = remote_text_content.text.lower().split()
     # okay we dont want a wall of text, lets just print the first 10 items
@@ -44,17 +45,19 @@ def parsing_a_remote_txt_file(url):
 parsing_a_remote_txt_file('http://projects.bobbelderbos.com/pcc/harry.txt')
 
 
-input_list = ['arnold schwarzenegger', 'alec baldwin', 'bob belderbos',
-         'julian sequeira', 'sandra bullock', 'keanu reeves',
-         'julbob pybites', 'bob belderbos', 'julian sequeira',
-         'al pacino', 'brad pitt', 'matt damon', 'brad pitt']
+input_list = ['Nelson Mandela', 'Mohandas Ghandhi','Napolean Bonaparte', 'Sachin Tendulkar']
 
 
 def converting_list_to_upper_case(input_list):
     output_list = list(set([name.upper() for name in input_list]))
     #enhance above list comprehension to remove duplicates
     #convert the data structure to a set, and then use sroted function with key to sort the list by last name
-    print(sorted(output_list,key= lambda x: x.split()[1]))
+    print(sorted(input_list,key= lambda x: x.split()[1]))
+    print(sorted(input_list,key= last_name))
+
+def last_name(x):
+    return x.split()[1]
+
 
 def sort_list_by_shortest_first_name(input_list):
     output_list = list(set([name.upper() for name in input_list]))

@@ -6,6 +6,7 @@ def main():
     game_core()
 
 def welcome_screen():
+
     print('-------------------------------------')
     print('Welcome to my Paper Scissors Rock game')
     print('-------------------------------------')

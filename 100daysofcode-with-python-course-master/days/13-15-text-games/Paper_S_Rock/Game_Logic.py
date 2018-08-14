@@ -5,7 +5,7 @@ import random
 class PSR_player:
 
     def __init__(self, name):
-    pass
+        pass
 
 class Roll:
     def __init__(self):
