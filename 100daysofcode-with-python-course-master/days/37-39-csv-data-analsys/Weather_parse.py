@@ -8,6 +8,8 @@ def main():
     #print(Data_parser.data_read())
     Data_parser.data_dict_read()
 
+    Data_parser.thanksgiving_parse()
+
 
 
 if __name__ == '__main__':
